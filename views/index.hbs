@@ -1,0 +1,36 @@
+
+<div class="container" >
+
+<style>
+  table thead tr th{
+    text-align: center;
+    font-size: 180%
+  }
+
+  table tr td{
+    text-align: center;
+  }
+</style>
+
+
+    <div >
+    <br>
+    <a href="/administrar" class="btn btn-primary">Admin</a>
+      <table class="table table-striped" style="width: 50%; margin: 0 auto;" >
+        <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Fecha</th>
+        </tr>
+        </thead>
+        {{#each personas}}
+          <tr>
+            <td >{{this.nombre}} {{this.apellido}}</td> 
+            <td >{{this.fecha}}</td>
+            <!--td class=".col-4"><a href="/persona/modificar/{{this.id}}">Modificar</a></td> 
+            <td class=".col-4"><a href="/persona/eliminar/{{this.id}}">Eliminar</a></td--> 
+          </tr>          
+       {{/each}}   
+      </table>
+    </div>
+</div>

@@ -1,0 +1,30 @@
+<div class="container">
+    </br></br></br>
+    <h1 style="width: 50%; margin: 0 auto;">Feriados</h1>    
+
+    </br></br>
+    <table class="table" style="width: 50%; margin: 0 auto;">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Fecha</th>
+                <th scope="col"> </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each feriados}}
+                <tr>
+                    <th scope="row">{{@index}}</th>
+                    <td >{{this.fechaFormateada}}</td> 
+                    <td class=".col-4"><a href="/x/x/eliminar/{{this._id}}">Eliminar</a></td>
+                </tr>          
+            {{/each}} 
+        </tbody>
+        </table>
+        <div style="text-align: center; margin-top: 40px">
+            <form action="/feriados/agregar" method="POST">
+                <input type="date" name="fechaNueva" id="fechaNueva">
+                <button type="submit" class="btn btn-primary">Agregar</button>
+            </form>
+        </div>
+</div>

@@ -1,0 +1,35 @@
+<div class="container">
+    </br></br></br>
+    <h1 style="width: 50%; margin: 0 auto;">Personas</h1>    
+
+    </br></br>
+    <table class="table" style="width: 50%; margin: 0 auto;">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nombre</th>
+                <th scope="col">Apellido</th>
+                <th scope="col">E-mail</th>
+                <th scope="col">Cel</th>
+                <th scope="col">Operacion</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each personas}}
+                <tr>
+                    <th scope="row">{{this.index}}</th>
+                    <td >{{this.nombre}}</td> 
+                    <td >{{this.apellido}}</td>
+                    <td >{{this.email}}</td>
+                    <td >{{this.celular}}</td>
+                    <td class=".col-4"><a href="/configPersonas/persona/modificar/{{this._id}}">Modificar</a></td> 
+                    <td class=".col-4"><a href="/configPersonas/persona/eliminar/{{this._id}}">Eliminar</a></td>
+                </tr>          
+            {{/each}} 
+        </tbody>
+        </table>
+        <div style="text-align: center; margin-top: 40px">
+            <a href="/configPersonas/persona/nuevo" class="btn btn-primary">Nuevo</a>
+            <a href="/configPersonas/feriados" class="btn btn-primary">Feriados</a>
+        </div>
+</div>
