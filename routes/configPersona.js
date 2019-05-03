@@ -52,7 +52,7 @@ const Feriado = require('../models/feriados');
 
   router.get("/feriados", sessionMiddleware.session, (req, res, next) =>{
  
-    Feriado.find( (err, feriados) => {
+    Feriado.find().sort(' _id ').exec((err, feriados) => {
 
       if(err) throw err;
 

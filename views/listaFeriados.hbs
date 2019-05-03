@@ -16,14 +16,14 @@
                 <tr>
                     <th scope="row">{{@index}}</th>
                     <td >{{this.fechaFormateada}}</td> 
-                    <td class=".col-4"><a href="/x/x/eliminar/{{this._id}}">Eliminar</a></td>
+                    <td class=".col-4"><a href="/feriados/eliminar/{{this._id}}">Eliminar</a></td>
                 </tr>          
             {{/each}} 
         </tbody>
         </table>
         <div style="text-align: center; margin-top: 40px">
             <form action="/feriados/agregar" method="POST">
-                <input type="date" name="fechaNueva" id="fechaNueva">
+                <input type="date" name="fechaNueva" id="fechaNueva" required>
                 <button type="submit" class="btn btn-primary">Agregar</button>
             </form>
         </div>
